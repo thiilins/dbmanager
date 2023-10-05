@@ -112,19 +112,19 @@ async function backup() {
       });
 
       const file = await generateFile(`${schemaForTable}_${chosenTable}`);
-      const spinner = ora(`Realizando backup de ${chosenSchema}.${chosenTable}...`).start();
+      const spinner = ora(`Realizando backup de ${schemaForTable}.${chosenTable}...`).start();
       const data = await db.any(
         `SELECT * FROM "${schemaForTable}"."${chosenTable}";`
       );
       for (let i = 0; i < data.length; i += batchSize) {
         const batchData = data.slice(i, i + batchSize);
-        const sql = generateBatchInsert(schema, table, batchData);
+        const sql = generateBatchInsert(schemaForTable, chosenTable, batchData);
         await fs.promises.appendFile(
           file,
           `-- Backup para ${schemaForTable}.${chosenTable}\n${sql}\n`
         );
       }
-      spinner.succeed(`Backup para ${chosenSchema}.${chosenTable} Finalizado!`);
+      spinner.succeed(`Backup para ${schemaForTable}.${chosenTable} Finalizado!`);
     },
     exit: () => process.exit(),
   };
