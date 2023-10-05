@@ -47,6 +47,7 @@ async function extractorData() {
       message: "Escolha um schema:",
       choices: await fetchSchemas(db),
     });
+    origin.chosenSchema = chosenSchema;
     if (operationType === "table") {
       const { chosenTable } = await inquirer.prompt({
         type: "list",
@@ -54,7 +55,6 @@ async function extractorData() {
         message: "Escolha uma tabela:",
         choices: await fetchTables(db, chosenSchema),
       });
-      origin.chosenSchema = chosenSchema;
       origin.chosenTable = chosenTable;
     }
   }

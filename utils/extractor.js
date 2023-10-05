@@ -74,7 +74,7 @@ async function sqlExtractorData(
         spinner.succeed(`Backup para ${chosenSchema}.${table} Finalizado!`);
       }
       spinner.indent = 0;
-      spinner.succeed(`Backup do Schema ${schema} Finalizado!`);
+      spinner.succeed(`Backup do Schema ${chosenSchema} Finalizado!`);
     },
     table: async () => {
       const spinner = ora(
