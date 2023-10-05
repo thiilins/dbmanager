@@ -3,8 +3,6 @@ const path = require('path');
 const pgp = require('pg-promise')();
 const { config } = require('dotenv');
 const inquirer = require('inquirer');
-const logError = require('./utils/logs/error');
-const logInfo = require('./utils/logs/info');
 const ora = require('ora');
 
 config();
