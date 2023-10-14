@@ -19,7 +19,7 @@ O projeto possui a seguinte estrutura de pastas:
 1. Clone o repositório para o seu sistema:
 
 ```bash
-git clone https://github.com/thiilins/db-manager-cli.git
+git clone https://github.com/seu-usuario/db-manager-cli.git
 ```
 
 2. Navegue até o diretório do projeto:
@@ -36,7 +36,7 @@ npm install
 
 ## Configuração do Ambiente
 
-Antes de usar a CLI, configure as variáveis de ambiente no arquivo `.env`. Aqui está um exemplo do conteúdo do arquivo `.env`:
+Antes de usar a CLI, configure as variáveis de ambiente no arquivo .env. Aqui está um exemplo do conteúdo do arquivo .env:
 
 ```env
 DB_HOST=''
@@ -47,6 +47,12 @@ DB_PORT='5432'
 ```
 
 Preencha os valores apropriados para se conectar ao seu banco de dados PostgreSQL.
+
+Alternativamente, você pode usar o comando npm run setup para configurar as variáveis de ambiente:
+
+```bash
+npm run setup
+```
 
 ## Utilização
 
@@ -96,16 +102,16 @@ npm run db-insert
 
 ### Configuração Personalizada
 
-Você pode personalizar a configuração da CLI editando os scripts no arquivo `package.json`.
+Você pode personalizar a configuração da CLI editando os scripts no arquivo package.json.
 
 ## Melhorias Implementadas
 
-- A CLI agora solicita o tamanho do chunk apenas uma vez e o reutiliza para todos os arquivos inseridos no `db-insert`.
-- Scripts adicionados ao `package.json` para automação de tarefas, incluindo configuração de variáveis de ambiente.
+- A CLI agora solicita o tamanho do chunk apenas uma vez e o reutiliza para todos os arquivos inseridos no db-insert.
+- Scripts adicionados ao package.json para automação de tarefas, incluindo configuração de variáveis de ambiente.
 
 ## Créditos
 
-Este projeto foi desenvolvido por Thiago Lins e é distribuído sob a licença MIT.
+Este projeto foi desenvolvido por [Seu Nome] e é distribuído sob a licença MIT.
 
 ## Contribuições
 
