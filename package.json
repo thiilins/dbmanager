@@ -1,9 +1,16 @@
 {
-  "name": "db-manager",
+  "name": "db-manager-cli",
   "version": "1.0.0",
   "main": "index.js",
   "type": "commonjs",
   "license": "MIT",
+  "scripts": {
+    "insert-db": "node dbInsert.js",
+    "backup-data": "node backupData.js",
+    "sql-to-json": "node sqlToJson.js",
+    "json-to-sql": "node JsonToSQL.js",
+    "setup-env": "node generateSetup.js"
+  },
   "dependencies": {
     "dotenv": "^16.3.1",
     "fs": "^0.0.1-security",
