@@ -14,7 +14,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "fs": "^0.0.1-security",
-    "inquirer": "9.2.23",
+    "inquirer": "9.3.2",
     "moment": "^2.29.4",
     "ora": "8",
     "pg-promise": "^11.5.4",
